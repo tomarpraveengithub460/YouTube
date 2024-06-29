@@ -1,16 +1,11 @@
 import React from 'react';
-import Head from './Head';
 import MainContainer from './MainContainer';
-import Sidebar from './Sidebar';
-import VideoContainer from './VideoContainer';
 
-const Body=()=>{
+const Body = () => {
     return (
-        <div>
-            <Head />
-            <MainContainer />
+        <div className='flex'>
             <Sidebar />
-            <VideoContainer />
+            <MainContainer/>
         </div>
     )
 }

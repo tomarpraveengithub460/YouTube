@@ -1,11 +1,12 @@
 import React from 'react';
+import ButtonList from './ButtonList';
+import VideoContainer from './VideoContainer';
 
-const MainContainer=()=>{
+const MainContainer = () => {
     return (
         <div>
-            <h1>Main Container</h1>
-            <h2>I am the MAin Container</h2>
-            <h3>Hello G</h3>
+            <ButtonList />
+            <VideoContainer />
         </div>
     )
 }

@@ -3,8 +3,9 @@ import React from 'react';
 const Head=()=>{
     return (
         <div>
-            <h1>Header</h1>
-            <h1>This is Header here</h1>
+            <div>
+                <img alt="menu" src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png'/>
+            </div>
         </div>
     )
 }
