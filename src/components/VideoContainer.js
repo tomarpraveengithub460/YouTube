@@ -2,8 +2,8 @@ import React from 'react';
 
 const VideoContainer=()=>{
     return (
-        <div>
-            <h1>Video Container</h1>
+        <div className="w-full bg-red-600">
+            Video Container
         </div>
     )
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 const Button=()=>{
     return (
-        <div>
-            <h1>Button List</h1>
+        <div className="w-full bg-green-600">
+            Button List
         </div>
     )
 }
-export default BUtton;
+export default Button;
