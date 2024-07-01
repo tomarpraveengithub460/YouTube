@@ -2,11 +2,13 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import MainContainer from './MainContainer';
 
-const Body = () => {
+const Body = (props) => {
+    const {showSidebar}=props;
+    console.log("This is : ",showSidebar);
     return (
-        <div className='main-body grid grid-flow-col bg-yellow-400'>
-            <div className='col-span-0'><Sidebar /></div>
-            <div className=''><MainContainer /></div>
+        <div className='main-body grid grid-flow-col grid-cols-12'>
+            {showSidebar?<div className='' ><Sidebar showSidebar={showSidebar} /></div>:<div className='col-span-2' ><Sidebar showSidebar={showSidebar} /></div>}
+            <div className='col-span-12'><MainContainer /></div>
         </div>
     )
 }

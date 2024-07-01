@@ -25,14 +25,15 @@ import { ReactComponent as SettingsIcon } from '../assets/Settings.svg';
 import { ReactComponent as ReportHistoryIcon } from '../assets/ReportHistory.svg';
 import { ReactComponent as HelpIcon } from '../assets/Help.svg';
 import { ReactComponent as FeedbackIcon } from '../assets/Feedback.svg';
+import SmallSidebar from './SmallSidebar';
 import '../index.css';
 
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = () => {
-    return (
-        
-            <div className='sidebar flex flex-col list-container h-[93vh] overflow-y-scroll'>
+const Sidebar = (props) => {
+    const {showSidebar}=props;
+    return showSidebar?<SmallSidebar/>: (
+            <div className='sidebar flex flex-col list-container h-[93vh] scrollbar-hide overflow-y-scroll'>
                 <ul>
                     <li>
                         <div><HomeIcon /></div>
