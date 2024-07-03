@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .list-container {
-    @apply max-w-56 pr-4;
+    @apply min-w-56 pr-2;
 }
 
 .list-container>ul {
@@ -11,11 +11,11 @@
 }
 
 .list-container>ul>li {
-    @apply flex p-2 px-2 w-full hover:bg-gray-200 rounded-xl;
+    @apply flex p-2  w-full hover:bg-gray-200 rounded-xl;
 }
 
 .list-container>ul>li>div {
-    @apply mr-4;
+    @apply mr-6;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -37,12 +37,16 @@ body {
     overscroll-behavior: none;
 }
 
+.App{
+    overscroll-behavior: none;
+}
+
 .btn-container > div{
     @apply h-auto  w-auto text-center text-xs font-bold bg-gray-200 p-2 rounded-xl
 }
 
 .scroll-container > div {
-    @apply flex-none w-auto p-2 text-justify text-sm h-auto bg-gray-100 rounded-lg;
+    @apply flex-none w-auto p-2 text-justify text-sm h-auto bg-gray-100 rounded-lg hover:bg-gray-200 cursor-pointer;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

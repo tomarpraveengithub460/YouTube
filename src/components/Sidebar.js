@@ -25,15 +25,16 @@ import { ReactComponent as SettingsIcon } from '../assets/Settings.svg';
 import { ReactComponent as ReportHistoryIcon } from '../assets/ReportHistory.svg';
 import { ReactComponent as HelpIcon } from '../assets/Help.svg';
 import { ReactComponent as FeedbackIcon } from '../assets/Feedback.svg';
-import SmallSidebar from './SmallSidebar';
+// import SmallSidebar from './SmallSidebar';
 import '../index.css';
-
 import { faGreaterThan } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
 
-const Sidebar = (props) => {
-    const {showSidebar}=props;
-    return showSidebar?<SmallSidebar/>: (
-            <div className='sidebar flex flex-col list-container h-[93vh] scrollbar-hide overflow-y-scroll'>
+const Sidebar = () => {
+    const showSidebar=useSelector((state)=>state.toggleSideBar.showSideBar);
+    // console.log(showSidebar);
+    return showSidebar?null: (
+            <div className='sidebar flex flex-col w-2/12 list-container h-[93vh]  scrollbar-hide overflow-y-scroll fixed left-0 overscroll-y-none'>
                 <ul>
                     <li>
                         <div><HomeIcon /></div>
@@ -171,9 +172,6 @@ const Sidebar = (props) => {
                     </li>
                 </ul>
                 <hr></hr>
-                <p className='text-xs text-center p-4'>
-                © 2024 Google LLC
-                </p>
             </div>
 
     )

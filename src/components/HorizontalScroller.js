@@ -46,14 +46,14 @@ const HorizontalScroller = () => {
     };
 
     return (
-        <div className="relative flex items-center space-between">
+        <div className="grid grid-flow-col mr-4 justify-stretch">
             <button 
-            className="absolute left-0 z-10 p-2 w-10 bg-white hover:bg-gray-400 
-            text-black scroll-left-arrow rounded-tr-xl rounded-br-xl hover:rounded-full" 
+            className="relative z-10 mt-3 bg-white hover:bg-gray-400 w-10 size-10
+            text-black font-bold scroll-left-arrow rounded-tr-xl rounded-br-xl hover:rounded-full" 
             onClick={scrollLeft} style={{ display: 'none' }}>
                 <FontAwesomeIcon icon={faAngleLeft} />
             </button>
-            <div className="scroll-container flex overflow-x-auto space-x-4 py-4 hide-scrollbar " 
+            <div className="scroll-container flex overflow-x-auto space-x-4 py-4 hide-scrollbar" 
             style={{ scrollBehavior: 'smooth' }}>
                 <div>All</div>
                 <div>Music</div>
@@ -77,7 +77,7 @@ const HorizontalScroller = () => {
                 <div>Video 8</div>
             </div>
             <button
-                className="absolute right-0 z-10 p-2 bg-white hover:bg-gray-400 
+                className="relative z-10 mt-3 bg-white hover:bg-gray-400 
                 w-10 size-10 text-black font-bold scroll-right-arrow rounded-tl-xl rounded-bl-xl hover:rounded-full"
                 onClick={scrollRight}
                 style={{ display: 'none' }}
@@ -88,15 +88,3 @@ const HorizontalScroller = () => {
     );
 };         
 export default HorizontalScroller;
-
-
-
-
-
-
-
-
-
-
-
-

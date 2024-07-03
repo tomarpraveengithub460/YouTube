@@ -5,7 +5,7 @@ import { ReactComponent as SubscriptionIcon } from "../assets/Subscription.svg";
 import {ReactComponent as YouIcon} from '../assets/You.svg';
 const SmallSidebar = () => {
     return (
-        <div className='flex flex-col h-[93vh] small-list-container'>
+        <div className='flex flex-col h-[93vh] small-list-container fixed'>
                 <ul>
                     <li className='flex flex-col items-center'>
                         <div className='w-6'><HomeIcon /></div>
